@@ -1,0 +1,33 @@
+.row{
+    display:flex;
+
+}
+.grid{
+    max-width:95%;
+    margin:auto;
+    position:relative;
+    top: 100px;
+}
+
+
+
+.button{
+    color: black;
+    background-color:white;
+    border:solid 2px black;
+    font-family: 'Helvetica Neue', sans-serif; font-size: 25px; 
+    margin: 20px;
+    font-weight: bold; 
+    letter-spacing: -1px; line-height: 1; text-align: center; 
+}
+    
+.clear{
+    color:orangered;
+    background-color:white;
+    border:dotted 2px black;
+    font-family: 'Helvetica Neue', sans-serif; font-size: 25px; 
+    margin: 20px;
+    font-weight: bold; 
+    letter-spacing: -1px; line-height: 1; text-align: center;
+    border-radius: 30%;
+}
