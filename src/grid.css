@@ -10,7 +10,8 @@
     max-width:85%;
     margin: auto;
     position:relative; 
-    top: 5rem; 
+    top: 5rem;
+    padding-bottom: 1rem; 
 }
 
 .button{

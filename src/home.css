@@ -1,0 +1,20 @@
+@font-face {
+    font-family: Ribeye;
+    src: url("./Ribeye/Ribeye-Regular.ttf");
+}
+.navigation{
+    background-color: #FFFFFF;
+    color: black;
+    font-family: 'Ribeye';
+    font-size: 2rem;
+    margin-top: 5rem;
+    width: 100%;
+    padding-left: 0;
+    padding-bottom: 3rem;
+}
+
+.col
+{
+    margin: auto;
+    
+}
