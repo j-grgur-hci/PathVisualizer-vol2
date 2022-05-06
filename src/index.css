@@ -1,11 +1,11 @@
 .body {
-  background: #e31b5f;
+  background: #EFE7DB;
 }
 
 @import url("https://fonts.googleapis.com/css?family=Montserrat:900i&display=swap");
 
 .title {
-  text-align: center;
+  /* text-align: center;
   font-size: 70px;
   letter-spacing: 0.1em;
   -webkit-text-fill-color: transparent;
@@ -14,5 +14,36 @@
   text-shadow: 8px 8px #ff1f8f, 0px 20px #000000;
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  border-radius: 10px;
+  border-radius: 10px; */
+  position: relative;
+  width: 689px;
+  height: 368px;
+  left: 471px;
+  top: 25px;
+  font-family: 'Ribeye';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 131px;
+  color: #000000;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+  0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.imageWrapper{
+  position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+}
+.overlayImage {
+  position: absolute;
+  /* z-index: 1; */
+  /* display: block; */
+  margin-left: auto;
+  margin-right: auto;
+  top:10%;
+  left:50%;
+  width: 35%;
 }

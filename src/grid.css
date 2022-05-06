@@ -1,33 +1,43 @@
+@font-face {
+    font-family: Ribeye;
+    src: url("./Ribeye/Ribeye-Regular.ttf");
+}
 .row{
     display:flex;
 
 }
-.grid{
-    max-width:95%;
-    margin:auto;
-    position:relative;
-    top: 100px;
+.main{
+    max-width:85%;
+    margin: auto;
+    position:relative; 
+    top: 5rem; 
 }
-
-
 
 .button{
-    color: black;
-    background-color:white;
-    border:solid 2px black;
-    font-family: 'Helvetica Neue', sans-serif; font-size: 25px; 
-    margin: 20px;
-    font-weight: bold; 
+    display: inline-block;
+    width: 12rem;
+    height: 2.5rem;
+    color: #FFFFFF;
+    background-color: #D90000;
+    border: #D90000;
+    border-right: black solid 0.5px;
+    font-family: 'Ribeye';
+    font-size: 25px; 
+    margin-bottom: 20px;
     letter-spacing: -1px; line-height: 1; text-align: center; 
 }
-    
 .clear{
-    color:orangered;
-    background-color:white;
-    border:dotted 2px black;
-    font-family: 'Helvetica Neue', sans-serif; font-size: 25px; 
-    margin: 20px;
-    font-weight: bold; 
-    letter-spacing: -1px; line-height: 1; text-align: center;
-    border-radius: 30%;
+        margin-top: 2rem;
+        width: 12rem;
+        height: 2.5rem;
+        color: black;
+        background-color: #FFFFFF;
+        border: #FFFFFF;
+        font-family: 'Ribeye';
+        font-size: 25px;
+        margin-bottom: 20px;
+        letter-spacing: -1px;
+        line-height: 1;
+        text-align: center;
+        display:inline ;
 }

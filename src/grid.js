@@ -6,7 +6,7 @@ import dijkstra from './algorithms/dijkstra';
 import dfs from './algorithms/dfs';
 import bfs from './algorithms/bfs';
 const rows=12;
-const cols=39;
+const cols=35;
 const NODE_START_ROW=0;
 const NODE_START_COL=0;
 const NODE_END_ROW=rows-1;
@@ -317,15 +317,16 @@ const clearPath=()=>{
 
 
 return(
-    <div id='grid'>
-        <button type='button' class='button' onClick={clearPath}>Clear Path</button>
+    <div class='main' id='grid'>
         {/* <button type='button' class='button' onClick={clearWalls}>Clear walls</button> */}
         {/* <button type='button' class='button' onClick={clearBoard}>Clear board</button> */}
-        <button type='button' class='button' id='1' onClick={visualizePathBFS}>Visualize BFS</button> 
-        <button type='button' class='button' id='2' onClick={visualizePathDFS}>Visualize DFS</button> 
-        <button type='button' class='button' id='3' onClick={visualizePathDijkstra}>Visualize Dijkstra</button> 
-        <button type='button'class='button' id='4' onClick={visualizePathAstar} >Visualize A*</button>
-        {/* <button type='button' class='clear' onClick={clearPath} >Clear path</button> */}
+        <button type='button' class='button' id='1' onClick={visualizePathBFS}>BFS</button> 
+        <button type='button' class='button' id='2' onClick={visualizePathDFS}>DFS</button> 
+        <button type='button' class='button' id='3' onClick={visualizePathDijkstra}>Dijkstra</button> 
+        <button type='button'class='button' id='4' onClick={visualizePathAstar} >A*</button>
+        {/* <button type='button' class='clear' onClick={clearPath} >Clear path</button> */} 
+        <button type='button' class='clear' onClick={clearPath}>CLEAR PATH</button>
+        <button type='button' class='clear' onClick={clearPath}>NEW WALLS</button>
         {gridWithNode}
     </div>
 )
