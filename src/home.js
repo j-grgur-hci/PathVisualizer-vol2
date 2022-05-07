@@ -1,5 +1,5 @@
 import React from 'react';
-// import 'bootstrap/dist/css/bootstrap.min.css'; 
+import {Grid} from '@mui/material';
 import './home.css'
 import Arrow from "./images/Arrow.png"
 
@@ -7,26 +7,25 @@ const Home =()=>{
     return(
     <div>
      <div class="navigation">
-                    <div className="container-fluid">
-                        <div className="row">
-                            <div className="col">
-                                <h5>Pseudokod</h5>
+         
+                   <Grid container spacing={0} direction="row" >
+                    <Grid item xs={3} >
+                                <h5 style={{margin:'0rem'}}>Pseudokod</h5>
                                 <img src={Arrow}/>
-                            </div>
-                            <div className="col ">
-                                <h5>Primjer</h5>
+                    </Grid>
+                    <Grid item xs={3}>
+                                <h5 style={{marginBottom:'0rem'}}>Primjer</h5>
                                 <img src={Arrow}/>
-                            </div>
-                            <div className="col">
-                                <h5>Vremenska i prostorna složenost</h5>
+                    </Grid>
+                    <Grid item xs={3}>
+                                <h5 style={{marginBottom:'0rem', marginTop:'5rem'}}>Vremenska i prostorna složenost</h5>
                                 <img src={Arrow}/>
-                            </div>
-                            <div className="col">
-                                <h5>Primjena</h5>
-                                <img src={Arrow}/>
-                            </div>
-                            </div>
-            </div>
+                    </Grid>
+                    <Grid item xs={3}>
+                                <h5 style={{marginBottom:'0rem', marginTop:'9rem', paddingLeft:'1rem'}}>Primjena</h5>
+                                <img src={Arrow} style={{ paddingLeft:'1rem'}}/>
+                    </Grid>
+                    </Grid>
     </div>
     </div>
     )
