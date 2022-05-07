@@ -1,10 +1,12 @@
 import React from 'react'
 import PathFind from './grid'
-import Home from './home'
+import Navigation from './navigation'
+import Pseudokod from './Pseudokod'
 const App=()=>{
    return( <div>
      <PathFind/>
-     <Home/>
+     <Navigation/>
+     <Pseudokod/>
     </div>)
 }
 export default App;
