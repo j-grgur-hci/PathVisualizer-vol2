@@ -1,0 +1,10 @@
+@font-face {
+    font-family: Ribeye;
+    src: url("./Ribeye/Ribeye-Regular.ttf");
+}
+
+.primjer {
+    color: black;
+    font-family: 'Ribeye';
+    font-size: 1.25rem;
+}
