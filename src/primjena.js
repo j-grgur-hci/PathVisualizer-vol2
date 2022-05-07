@@ -1,13 +1,13 @@
 import React from 'react';
 import {Grid} from '@mui/material';
-import pseudoSlika from './images/pseudokod.png';
+import primjenaSlika from './images/primjena.png';
 import okvir from './images/okvirPseudokod.png'
-import './pseudokod.css'
+import './primjena.css'
 
-const Pseudokod=()=>{
+const Primjena=()=>{
 return(
-    <div class="pseudokod">
-        <img src={pseudoSlika} style={{marginLeft:'auto',marginRight:'auto',marginTop:'2rem',marginBottom:'4rem',display: 'block',width:'100%', }}/>
+    <div class="pseudokod" style={{paddingBottom:'2rem'}}>
+        <img src={primjenaSlika} style={{marginLeft:'auto',marginRight:'auto',marginTop:'2rem',marginBottom:'4rem',display: 'block',width:'100%', }}/>
     <Grid container spacing={4} direction="row" >
         <Grid item xs={6} >
                     <img src={okvir} style={{marginLeft:'2rem'}}/>
@@ -27,4 +27,4 @@ return(
 
 )}
 
-export default Pseudokod;
+export default Primjena;
