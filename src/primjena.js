@@ -7,10 +7,10 @@ import './primjena.css'
 const Primjena=()=>{
 return(
     <div class="pseudokod" style={{paddingBottom:'2rem'}}>
-        <img src={primjenaSlika} style={{marginLeft:'auto',marginRight:'auto',marginTop:'2rem',marginBottom:'4rem',display: 'block',width:'100%', }}/>
+        <img src={primjenaSlika} style={{marginLeft:'auto',marginRight:'auto',marginTop:'2rem',marginBottom:'4rem',display: 'block',maxWidth:'100%', height:'auto',  }}/>
     <Grid container spacing={4} direction="row" >
         <Grid item xs={6} >
-                    <img src={okvir} style={{marginLeft:'2rem'}}/>
+                    <img src={okvir} style={{marginLeft:'2rem'}} alt='okvir za sliku primjene'/>
                     </Grid>
         <Grid item xs={6}>
                     <h5>Rekurzija DFS algoritma se implementira uporabom stoga, pri čemu će svaki čvor grafa biti označen ako posjećen ili neposjećen. Implementacija može biti opisana na sljedeći način:

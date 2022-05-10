@@ -16,7 +16,7 @@ const Primjer=()=>{
                         4. Ponavlja se 2. i 3. korak dok stog ne bude prazan</h5>
         </Grid>
         <Grid item xs={6} >
-                    <img src={okvirPrimjer} style={{}}/>
+                    <img src={okvirPrimjer} alt='okvir za sliku primjera'/>
         </Grid>
 
     </Grid>

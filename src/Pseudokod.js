@@ -10,7 +10,7 @@ return(
         <img src={pseudoSlika} style={{marginLeft:'auto',marginRight:'auto',marginTop:'2rem',marginBottom:'4rem',display: 'block',width:'100%', }}/>
     <Grid container spacing={4} direction="row" >
         <Grid item xs={6} >
-                    <img src={okvir} style={{marginLeft:'2rem'}}/>
+                    <img src={okvir} style={{marginLeft:'2rem'}} alt='okvir za sliku pseudokoda'/>
                     </Grid>
         <Grid item xs={6}>
                     <h5>Rekurzija DFS algoritma se implementira uporabom stoga, pri čemu će svaki čvor grafa biti označen ako posjećen ili neposjećen. Implementacija može biti opisana na sljedeći način:

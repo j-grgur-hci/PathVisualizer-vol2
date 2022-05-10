@@ -16,7 +16,7 @@ const Slozenost=()=>{
                         4. Ponavlja se 2. i 3. korak dok stog ne bude prazan</h5>
         </Grid>
         <Grid item xs={6} >
-                    <img src={okvirSlozenost} style={{marginLeft:'5rem'}}/>
+                    <img src={okvirSlozenost} style={{marginLeft:'5rem'}} alt='okvir za sliku slozenosti'/>
         </Grid>
 
     </Grid>
