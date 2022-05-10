@@ -7,7 +7,7 @@ import './primjena.css'
 const Primjena=()=>{
 return(
     <div class="pseudokod" style={{paddingBottom:'2rem'}}>
-        <img src={primjenaSlika} style={{marginLeft:'auto',marginRight:'auto',marginTop:'2rem',marginBottom:'4rem',display: 'block',maxWidth:'100%', height:'auto',  }}/>
+        <img src={primjenaSlika} style={{marginLeft:'auto',marginRight:'auto',marginTop:'2rem',marginBottom:'4rem',display: 'block',maxWidth:'100%', height:'auto',  }} alt='pseudokod header'/>
     <Grid container spacing={4} direction="row" >
         <Grid item xs={6} >
                     <img src={okvir} style={{marginLeft:'2rem'}} alt='okvir za sliku primjene'/>

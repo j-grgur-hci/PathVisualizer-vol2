@@ -15,12 +15,12 @@ const Navigation =()=>{
                                 <img src={Arrow} alt='Arrow image'/>
                     </Grid>
                     <Grid item xs={3}>
-                                <h5 style={{marginBottom:'0rem', marginTop:'2.5rem'}} class='option' alt='Arrow image'>Primjer</h5>
-                                <img src={Arrow}/>
+                                <h5 style={{marginBottom:'0rem', marginTop:'2.5rem'}} class='option'>Primjer</h5>
+                                <img src={Arrow} alt='Arrow image'/>
                     </Grid>
                     <Grid item xs={3}>
-                                <h5 style={{marginBottom:'0rem', marginTop:'5rem'}} class='option' alt='Arrow image'>Vremenska i prostorna složenost</h5>
-                                <img src={Arrow}/>
+                                <h5 style={{marginBottom:'0rem', marginTop:'5rem'}} class='option' >Vremenska i prostorna složenost</h5>
+                                <img src={Arrow} alt='Arrow image'/>
                     </Grid>
                     <Grid item xs={3}>
                                 <h5 style={{marginBottom:'0rem', marginTop:'9.5rem', paddingLeft:'1rem'}} class='option'>Primjena</h5>

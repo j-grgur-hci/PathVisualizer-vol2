@@ -149,7 +149,7 @@ const gridWithNode=(
                         col={colIndex}
                         isWall={isWall}
                         isWeight={isWeight}
-                        isVisited={isVisited}
+                        // isVisited={isVisited}
                         />
                     )
                 })}
@@ -160,7 +160,7 @@ const gridWithNode=(
     </div> 
 );
 const visualizeShorthestPath=(shorthestPathNodes)=>{
-   for(let i=0;i<shorthestPathNodes.length;i++){
+   for(let i=1;i<shorthestPathNodes.length-1;i++){
        setTimeout(()=>{
            const node=shorthestPathNodes[i];
             document.getElementById(`node-${node.x}-${node.y}`).className='node node-shorthest-path';
@@ -170,8 +170,8 @@ const visualizeShorthestPath=(shorthestPathNodes)=>{
 //A*
 const visualizePathAstar=()=>{
     // console.log('visualize path');
-       for(let i=0;i<=visitedNodes.length;i++){
-       if(i===visitedNodes.length){
+       for(let i=1;i<=visitedNodes.length-1;i++){
+       if(i===visitedNodes.length-1){
         setTimeout(()=>{
         visualizeShorthestPath(Path);
        }, 30*i);
@@ -187,8 +187,9 @@ const visualizePathAstar=()=>{
 //DFS
 const visualizePathDFS=()=>{
     // console.log('visualize path');
-       for(let i=0;i<=visitedNodes.length;i++){
-       if(i===visitedNodes.length){
+       for(let i=1;i<=visitedNodes.length-1;i++){
+           console.log(visitedNodes[i]);
+       if(i===visitedNodes.length-1){
         setTimeout(()=>{
         visualizeShorthestPath(Path);
        }, 30*i);
@@ -203,8 +204,8 @@ const visualizePathDFS=()=>{
 }
 //BFS
 const visualizePathBFS=()=>{
-       for(let i=0;i<=visitedNodes.length;i++){
-       if(i===visitedNodes.length){
+       for(let i=1;i<=visitedNodes.length-1;i++){
+       if(i===visitedNodes.length-1){
         setTimeout(()=>{
         visualizeShorthestPath(Path);
        }, 30*i);
@@ -213,14 +214,14 @@ const visualizePathBFS=()=>{
         setTimeout(()=>{
         const node=visitedNodes[i];
         document.getElementById(`node-${node.x}-${node.y}`).className='node node-visited';
-        },20*i);
+        }, 20*i);
    }
     }
 }
 //DIJKSTRA
 const visualizePathDijkstra=()=>{
-       for(let i=0;i<=visitedNodes.length;i++){
-       if(i===visitedNodes.length){
+       for(let i=1;i<=visitedNodes.length-1;i++){
+       if(i===visitedNodes.length-1){
         setTimeout(()=>{
         visualizeShorthestPath(Path);
        }, 30*i);

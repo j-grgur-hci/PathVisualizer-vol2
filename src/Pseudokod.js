@@ -7,7 +7,7 @@ import './pseudokod.css'
 const Pseudokod=()=>{
 return(
     <div class="pseudokod">
-        <img src={pseudoSlika} style={{marginLeft:'auto',marginRight:'auto',marginTop:'2rem',marginBottom:'4rem',display: 'block',width:'100%', }}/>
+        <img src={pseudoSlika} style={{marginLeft:'auto',marginRight:'auto',marginTop:'2rem',marginBottom:'4rem',display: 'block',width:'100%', }} alt='pseudokod header'/>
     <Grid container spacing={4} direction="row" >
         <Grid item xs={6} >
                     <img src={okvir} style={{marginLeft:'2rem'}} alt='okvir za sliku pseudokoda'/>
