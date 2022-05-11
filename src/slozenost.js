@@ -2,10 +2,10 @@ import React from 'react';
 import {Grid} from '@mui/material';
 import slozenostSlika from './images/slozenost.png'
 import okvirSlozenost from './images/slozenostPrimjer.png'
-import './primjer.css'
+import './slozenost.css'
 const Slozenost=()=>{
     return(
-        <div class="primjer">
+        <div class="slozenost" id="slozenost">
          <img src={slozenostSlika} style={{marginLeft:'auto',marginRight:'auto',marginTop:'2rem',marginBottom:'4rem',display: 'block',width:'100%', }} alt='slozenost header'/>
            <Grid container spacing={4} direction="row" >
         <Grid item xs={6} >

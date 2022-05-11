@@ -6,7 +6,7 @@ import './pseudokod.css'
 
 const Pseudokod=()=>{
 return(
-    <div class="pseudokod">
+    <div class="pseudokod" id='pseudokod'>
         <img src={pseudoSlika} style={{marginLeft:'auto',marginRight:'auto',marginTop:'2rem',marginBottom:'4rem',display: 'block',width:'100%', }} alt='pseudokod header'/>
     <Grid container spacing={4} direction="row" >
         <Grid item xs={6} >

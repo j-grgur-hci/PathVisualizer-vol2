@@ -6,7 +6,7 @@ import './primjena.css'
 
 const Primjena=()=>{
 return(
-    <div class="pseudokod" style={{paddingBottom:'2rem'}}>
+    <div class="pseudokod" style={{paddingBottom:'2rem'}} id="primjena">
         <img src={primjenaSlika} style={{marginLeft:'auto',marginRight:'auto',marginTop:'2rem',marginBottom:'4rem',display: 'block',maxWidth:'100%', height:'auto',  }} alt='pseudokod header'/>
     <Grid container spacing={4} direction="row" >
         <Grid item xs={6} >
