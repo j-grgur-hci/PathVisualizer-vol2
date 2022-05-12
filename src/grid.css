@@ -26,6 +26,7 @@
     font-size: 25px; 
     margin-bottom: 20px;
     letter-spacing: -1px; line-height: 1; text-align: center; 
+    cursor: pointer;
 }
 .clear{
         margin-top: 2rem;
@@ -41,6 +42,7 @@
         line-height: 1;
         text-align: center;
         display:inline ;
+        cursor: pointer;
 }
 
 .clear:hover{
