@@ -6,7 +6,7 @@ import './primjer.css'
 const Primjer=()=>{
     return(
         <div class="primjer" id="primjer">
-         <img src={primjerSlika} style={{marginLeft:'auto',marginRight:'auto',marginTop:'2rem',marginBottom:'4rem',display: 'block',width:'100%', }} alt='primjer slozenost'/>
+         <img src={primjerSlika} style={{marginLeft:'auto',marginRight:'auto',marginTop:'2rem',marginBottom:'4rem',display: 'block',width:'100%', }} alt='primjer header'/>
            <Grid container spacing={4} direction="row" >
         <Grid item xs={6} >
                     <h5 style={{marginLeft:'2rem'}}>Rekurzija DFS algoritma se implementira uporabom stoga, pri čemu će svaki čvor grafa biti označen ako posjećen ili neposjećen. Implementacija može biti opisana na sljedeći način:
