@@ -1,4 +1,5 @@
 import React,{useState,useEffect} from 'react';
+import { render } from 'react-dom';
 import Node from './Node';
 import './grid.css';
 import Astar from './algorithms/astar';
@@ -315,27 +316,40 @@ const clearPath=()=>{
             }
 
         }}
+};
+function Display() {
+    setTimeout(()=>{
+        var x = document.getElementsByClassName('komponenta');
+        console.log(x);
+        for(let i=0;i<x.length;i++){
+        if (x[i].style.display === 'none') {
+          x[i].style.display = 'block';
+        } else {
+          x[i].style.display = 'none';
+        }}
+    },30)
 }
-
-
 return(
-    <div class='main' id='grid'>
+    <div>
+
+    <div class='main' id='grid' >
         {/* <button type='button' class='button' onClick={clearWalls}>Clear walls</button> */}
         {/* <button type='button' class='button' onClick={clearBoard}>Clear board</button> */}
          <Grid container spacing={0} direction="column" >
-        <Grid item xs={12} style={{maxWidth:'85%', margin:'auto',position:'relative'}}  >
-        <button type='button' class='button' id='1'  onClick={visualizePathBFS}>BFS</button> 
+        <Grid item xs={12} style={{maxWidth:'85%', margin:'auto',position:'relative'}} onClick={Display} >
+        <button type='button' class='button' id='1'  onClick={visualizePathBFS} >BFS</button> 
         <button type='button' class='button' id='2' onClick={visualizePathDFS}>DFS</button> 
         <button type='button' class='button' id='3' onClick={visualizePathDijkstra}>Dijkstra</button> 
         <button type='button'class='button' id='4' onClick={visualizePathAstar} >A*</button>
                     </Grid>
-        <Grid item xs={12}style={{maxWidth:'85%', margin:'auto',position:'relative'}} >
+        <Grid item xs={12}style={{maxWidth:'85%', margin:'auto',position:'relative'}}onClick={Display} >
         {/* <button type='button' class='clear' onClick={clearPath} >Clear path</button> */} 
         <button type='button' class='clear' onClick={clearPath}>CLEAR PATH</button>
         {/* <button type='button' class='clear' onClick={clearPath}>NEW WALLS</button> */}
         </Grid>
         </Grid>
         {gridWithNode}
+    </div>
     </div>
 )
 }

@@ -3,8 +3,9 @@
     src: url("./Ribeye/Ribeye-Regular.ttf");
 }
 
-.slozenost {
+.komponenta {
     color: black;
     font-family: 'Ribeye';
     font-size: 1.25rem;
+    display: none;
 }
