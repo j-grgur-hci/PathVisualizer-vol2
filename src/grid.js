@@ -7,6 +7,7 @@ import dijkstra from './algorithms/dijkstra';
 import dfs from './algorithms/dfs';
 import bfs from './algorithms/bfs';
 import {Grid} from '@mui/material';
+import Pseudokod from './Pseudokod';
 const rows=12;
 const cols=35;
 const NODE_START_ROW=0;
@@ -45,16 +46,34 @@ const PathFind=()=>{
         startNode.isWall=false;
         endNode.isWall=false;
 
-        document.getElementById('grid').addEventListener('click', function(e){
+        document.getElementById('grid').addEventListener('click',function(e){
             var target=e.target;
-            if(target.id==='3')
+            if(target.id==='3'){
             visualizeDijkstra(grid,startNode,endNode);
-            else if(target.id==='4')
-            visualizeA(startNode,endNode);
-            else if(target.id==='2')
+        }
+            else if(target.id==='4'){
+            visualizeA(startNode,endNode);}
+            else if(target.id==='2'){
             visualizeDFS(grid,startNode,endNode);
-            else if(target.id==='1')
-            visualizeBFS(grid,startNode,endNode);
+            document.getElementById('h5_pseudo').innerHTML="Rekurzija DFS algoritma se implementira uporabom stoga, pri čemu će svaki čvor grafa biti označen ako posjećen ili neposjećen.                                                Implementacija može biti opisana na sljedeći način:                                                               1.Odabere se početni čvor te se stave njegovi susjedi na vrh stoga                                                                                                              2.Skida se čvor sa vrha stoga te ga se stavlja u listu posjećenih čvorova                                         3.Susjedi tog čvora koji se ne nalaze u listi posjećenih čvorova potom se stavljaju na vrh stoga                                                                                                              4.Ponavlja se 2. i 3. korak dok stog ne bude prazan ";
+            document.getElementById('h5_primjer').innerHTML=""
+            document.getElementById('h5_slozenost').innerHTML="Vremenska složenost je O(V) + O(E) = O(V + E), a prostorna O(V)."
+            const ul = document.getElementById("ul_primjena");
+            const li = document.createElement("li");
+            li.appendChild(document.createTextNode("Rješavanje zagonetki poput labirinta i sudoku-a"));
+            ul.appendChild(li);
+            const li1 = document.createElement("li");
+            li1.appendChild(document.createTextNode("Topološko sortiranje"));
+            ul.appendChild(li1);
+            const li2 = document.createElement("li");
+            li2.appendChild(document.createTextNode("Mapiranje ruta i analiza mreže(primjerice testiranje je li graf bipartitan)"));
+            ul.appendChild(li2);
+            const li3 = document.createElement("li");
+            li3.appendChild(document.createTextNode("Detekcija ciklusa u grafovima"));
+            ul.appendChild(li3); 
+        }
+            else if(target.id==='1'){
+            visualizeBFS(grid,startNode,endNode);}
         },false);
         
     };
@@ -319,7 +338,7 @@ const clearPath=()=>{
 };
 function Display() {
     setTimeout(()=>{
-        var x = document.getElementsByClassName('komponenta');
+        var x = document.querySelectorAll('.komponenta, .navigation');
         console.log(x);
         for(let i=0;i<x.length;i++){
         if (x[i].style.display === 'none') {
@@ -327,7 +346,19 @@ function Display() {
         } else {
           x[i].style.display = 'none';
         }}
-    },30)
+    },)
+}
+function RemoveDisplay(){
+       setTimeout(()=>{
+        var x = document.querySelectorAll('.komponenta, .navigation');
+        console.log(x);
+        for(let i=0;i<x.length;i++){
+        if (x[i].style.display === 'block') {
+          x[i].style.display = 'none';
+        } else {
+          x[i].style.display = 'none';
+        }}
+    },) 
 }
 return(
     <div>
@@ -341,8 +372,8 @@ return(
         <button type='button' class='button' id='2' onClick={visualizePathDFS}>DFS</button> 
         <button type='button' class='button' id='3' onClick={visualizePathDijkstra}>Dijkstra</button> 
         <button type='button'class='button' id='4' onClick={visualizePathAstar} >A*</button>
-                    </Grid>
-        <Grid item xs={12}style={{maxWidth:'85%', margin:'auto',position:'relative'}}onClick={Display} >
+        </Grid>
+        <Grid item xs={12}style={{maxWidth:'85%', margin:'auto',position:'relative'}}onClick={RemoveDisplay} >
         {/* <button type='button' class='clear' onClick={clearPath} >Clear path</button> */} 
         <button type='button' class='clear' onClick={clearPath}>CLEAR PATH</button>
         {/* <button type='button' class='clear' onClick={clearPath}>NEW WALLS</button> */}

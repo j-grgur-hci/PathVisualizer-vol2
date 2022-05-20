@@ -10,9 +10,9 @@ const App=()=>{
    return( 
      <BrowserRouter>
    <div>
-     <PathFind/>
+     <PathFind />
      <Navigation/>
-     <Pseudokod/>
+     <Pseudokod />
      <Primjer/>
      <Slozenost/>
      <Primjena/>

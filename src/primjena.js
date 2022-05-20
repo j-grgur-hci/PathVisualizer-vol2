@@ -13,7 +13,7 @@ return(
                     <img src={okvir} style={{marginLeft:'2rem'}} alt='okvir za sliku primjene'/>
                     </Grid>
         <Grid item xs={6}>
-                    <h5 style={{marginRight:'2rem'}}></h5>
+                    <ul style={{marginRight:'2rem'}} id='ul_primjena'></ul>
         </Grid>
 
     </Grid>
