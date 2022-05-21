@@ -28,6 +28,9 @@
     letter-spacing: -1px; line-height: 1; text-align: center; 
     cursor: pointer;
 }
+.button:last-child{
+    border-right: none;
+}
 
 .button:hover{
     background-color: black;

@@ -6,9 +6,6 @@ import dijkstra from './algorithms/dijkstra';
 import dfs from './algorithms/dfs';
 import bfs from './algorithms/bfs';
 import {Grid} from '@mui/material';
-/*-----SLIKE----*/
-import dfsPseudo from './images/algorithm_img/dfs_pseudo.png'
-
 const rows=12;
 const cols=35;
 const NODE_START_ROW=0;

@@ -1,9 +1,8 @@
 import React from 'react';
 import {Grid} from '@mui/material';
-import pseudoSlika from './images/pseudokod.png';
-import okvir from './images/okvirPseudokod.png';
-import bla from './images/algorithm_img/dfs_pseudo.png'
-import './komponenta.css'
+import pseudoSlika from '../images/pseudokod.png';
+import okvir from '../images/okvirPseudokod.png';
+import './components_css/komponenta.css'
 
 const Pseudokod=()=>{
 
@@ -18,8 +17,8 @@ return(
             </div>
                     </Grid>
         <Grid item xs={6}>
-                    <h5 style={{marginRight:'2rem'}} id='h5_pseudo'></h5>
-                    <ul id='pseudo_lista'></ul>
+                    <h5 style={{marginRight:'2rem',fontSize: '1.25rem'}} id='h5_pseudo'></h5>
+                    <ul id='pseudo_lista' style={{marginRight:'2rem'}}></ul>
         </Grid>
     </Grid>
 

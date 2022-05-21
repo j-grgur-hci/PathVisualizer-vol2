@@ -1,8 +1,8 @@
 import React from 'react';
 import {Grid} from '@mui/material';
-import primjenaSlika from './images/primjena.png';
-import okvir from './images/okvirPseudokod.png'
-import './komponenta.css'
+import primjenaSlika from '../images/primjena.png';
+import okvir from '../images/okvirPseudokod.png'
+import './components_css/komponenta.css'
 
 const Primjena=()=>{
 return(

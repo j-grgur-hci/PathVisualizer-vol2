@@ -1,8 +1,9 @@
 import React from 'react';
 import {Grid} from '@mui/material';
-import './navigation.css';
-import Arrow from "./images/Arrow.png";
 import {HashLink as Link} from 'react-router-hash-link';
+import './components_css/navigation.css'
+import './components_css/komponenta.css'
+import Arrow from "../images/Arrow.png";
 
 const Navigation =()=>{
     return(
@@ -15,7 +16,7 @@ const Navigation =()=>{
                                 <img src={Arrow} alt='Arrow image'/></Link>
                     </Grid>
                     <Grid item xs={3}>
-                                <Link to='#primjer' smooth style={{textDecoration:'none'}}><h5 style={{marginBottom:'0rem', marginTop:'2.5rem'}} class='option'>Primjer </h5>
+                                <Link to='#primjer' smooth style={{textDecoration:'none'}}><h5 style={{marginBottom:'0rem', marginTop:'2.5rem',marginLeft:'0rem'}} class='option'>Primjer </h5>
                                 <img src={Arrow} alt='Arrow image'/></Link>
                     </Grid>
                     <Grid item xs={3}>
@@ -23,8 +24,8 @@ const Navigation =()=>{
                                 <img src={Arrow} alt='Arrow image'/></Link>
                     </Grid>
                     <Grid item xs={3}>
-                                <Link to='#primjena' smooth style={{textDecoration:'none'}}><h5 style={{marginBottom:'0rem', marginTop:'9.5rem', paddingLeft:'1rem'}} class='option'>Primjena</h5>
-                                <img src={Arrow} style={{ paddingLeft:'1rem'}} alt='Arrow image'/></Link>
+                                <Link to='#primjena' smooth style={{textDecoration:'none'}}><h5 style={{marginBottom:'0rem', marginTop:'9.5rem', marginLeft:'1rem'}} class='option'>Primjena</h5>
+                                <img src={Arrow} style={{ marginLeft:'1rem'}} alt='Arrow image'/></Link>
                     </Grid>
                     </Grid>
     </div>
