@@ -6,6 +6,16 @@
 .komponenta {
     color: black;
     font-family: 'Ribeye';
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     display: none;
+}
+
+li{
+    color: black;
+    font-family: 'Ribeye';
+    margin-bottom:1rem ;
+    font-size: 1rem;
+}
+li:last-child {
+    margin-bottom: 0px;
 }

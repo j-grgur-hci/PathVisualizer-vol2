@@ -1,5 +1,4 @@
 import React,{useState,useEffect} from 'react';
-import { render } from 'react-dom';
 import Node from './Node';
 import './grid.css';
 import Astar from './algorithms/astar';
@@ -7,7 +6,9 @@ import dijkstra from './algorithms/dijkstra';
 import dfs from './algorithms/dfs';
 import bfs from './algorithms/bfs';
 import {Grid} from '@mui/material';
-import Pseudokod from './Pseudokod';
+/*-----SLIKE----*/
+import dfsPseudo from './images/algorithm_img/dfs_pseudo.png'
+
 const rows=12;
 const cols=35;
 const NODE_START_ROW=0;
@@ -49,18 +50,108 @@ const PathFind=()=>{
         document.getElementById('grid').addEventListener('click',function(e){
             var target=e.target;
             if(target.id==='3'){
-                Display();
+            Display();
             visualizeDijkstra(grid,startNode,endNode);
+            
+           document.getElementById('h5_pseudo').innerHTML="Dijkstrin algoritam se koristi redom s prioritetom kao strukturom podataka, pri čemu je svaki element povezan s prioritetom te se obrađuje prema istome. Razlika između reda s prioritetom i običnog reda je da obični red funkcionira po principu FIFO (First In First Out), a red s prioritetom funkcionira na osnovu prioriteta odnosno element s najvećim prioritetom se prvi miče.                 Implementacija algoritma može biti opisana na sljedeći način:"
+           const pseudo_list=document.getElementById('pseudo_lista')
+           const pseudo1 =document.createElement('li');
+            pseudo1.appendChild(document.createTextNode("Svi čvorovi se označuju kao neposjećeni te se stvori lista istih"));
+            pseudo_list.appendChild(pseudo1);
+           const pseudo2 =document.createElement('li');
+            pseudo2.appendChild(document.createTextNode("Inicijaliziraju se udaljenosti čvorova, pri čemu se udaljenost početnog čvora postavi na nulu, a udaljenost preostalih čvorova na beskonačno (oznaka da nisu posjećeni)"));
+            pseudo_list.appendChild(pseudo2);
+           const pseudo3 =document.createElement('li');
+            pseudo3.appendChild(document.createTextNode("Izračunava se udaljenost susjednih čvorova trenutnog čvora"));
+            pseudo_list.appendChild(pseudo3);
+           const pseudo4 =document.createElement('li');
+            pseudo4.appendChild(document.createTextNode("Trenutni čvor se označava kao posjećen i miče se iz liste neposjećenih (posjećeni čvor se više nikad neće provjeriti)"));
+            pseudo_list.appendChild(pseudo4);
+           const pseudo5 =document.createElement('li');
+            pseudo5.appendChild(document.createTextNode("Ako je odredišni čvor označen kao posjećen ili ako je najmanja udaljenost između čvorova u neposjećenom skupu beskonačna tada je algoritam gotov"));
+            pseudo_list.appendChild(pseudo5);
+           const pseudo6 =document.createElement('li');
+            pseudo6.appendChild(document.createTextNode("Ukoliko algoritam nije gotov, odabire se neposjećeni čvor sa najmanjom udaljenošću te se postavi kao novi trenutni čvor  i vraća se natrag na 3.korak"));
+            pseudo_list.appendChild(pseudo6);
+
+    
+            document.getElementById('h5_primjer').innerHTML=""
+            document.getElementById('h5p_slozenost').innerHTML="Prostorna složenost u najgorem slučaju je O(E+V log⁡V) koristeći red s prioritetom"
+            document.getElementById('h5v_slozenost').innerHTML="Vremenska složenost je pri tome O (V)."
+            const ul = document.getElementById("ul_primjena");
+            const li = document.createElement("li");
+            li.appendChild(document.createTextNode("Google Maps -Postoji mnogi broj različitih puteva između dvije geografske lokacije, no Dijkstrin algoritam   omogućava da se pronađe najkraći od tih puteva. Primjerice, put Split – Beč koji se mogu promatrati kao dva čvora, a moguće puteve između te dvije lokacije kao rubove"));
+            ul.appendChild(li);
+            const li1 = document.createElement("li");
+            li1.appendChild(document.createTextNode("Društvene mreže – Koristi se za listu predloženih prijatelja koje bi korisnik mogao znati, a radi na osnovu različitih poveznica između korisnika"));
+            ul.appendChild(li1);
+            const li2 = document.createElement("li");
+            li2.appendChild(document.createTextNode("Plan leta – Kada zaposlenik treba za klijenta odrediti letove s kojima će u najkraćem vremenskom roku doći do željenog odredišta"));
+            ul.appendChild(li2);
+            const li3 = document.createElement("li");
+            li3.appendChild(document.createTextNode("IP usmjeravanje za pronalaženje najprije otvorenog najkraćeg puta – Najprije otvoren najkraći put je protokol koji se koristi kako bi se pronašao najbolji put između izvora i odredišnog routera koji koristi najkraći put "));
+            ul.appendChild(li3); 
         }
             else if(target.id==='4'){
                 Display();
-            visualizeA(startNode,endNode);}
+            visualizeA(startNode,endNode);
+            document.getElementById('h5_pseudo').innerHTML="A* algoritam se implementira poput Dijkstre, preko reda s prioritetom, ali u odnosu na Dijkstru koristi heuristiku za pretraživanje čvorova tako da je vjerojatnije da će se ciljni čvor prije pronaći.Implementacija algoritma se može opisati na sljedeći način:"
+            const pseudo_list=document.getElementById('pseudo_lista')
+           const pseudo1 =document.createElement('li');
+            pseudo1.appendChild(document.createTextNode("Inicijalizira se lista posjećenih i neposjećenih čvorova"));
+            pseudo_list.appendChild(pseudo1);
+           const pseudo2 =document.createElement('li');
+            pseudo2.appendChild(document.createTextNode("Čvor sa najmanjim F troškom se premješta iz liste neposjećenih u listu posjećenih  čvorova"));
+            pseudo_list.appendChild(pseudo2);
+           const pseudo3 =document.createElement('li');
+            pseudo3.appendChild(document.createTextNode("Ako se susjed trenutnog čvora ne nalazi u neposjećenoj listi  izračunava se F vrijednost te se dodaje u listu"));
+            pseudo_list.appendChild(pseudo3);
+           const pseudo4 =document.createElement('li');
+            pseudo4.appendChild(document.createTextNode("Ako susjedni čvor se nalazi u listi posjećenih čvorova, ignorira se"));
+            pseudo_list.appendChild(pseudo4);
+           const pseudo5 =document.createElement('li');
+            pseudo5.appendChild(document.createTextNode("Ako se susjedni čvor nalazi u listi neposjećenih, uspoređuje se F vrijednost trenutnog čvora i preostalih susjednih čvorova te ukoliko je manja"));
+            pseudo_list.appendChild(pseudo5);
+            document.getElementById('h5_primjer').innerHTML="";
+             document.getElementById('h5p_slozenost').innerHTML="Prostorna složenost u najgorem slučaju je O(V)."
+            document.getElementById('h5v_slozenost').innerHTML="Vremenska složenost A* ovisi o heuristici. U najgorem slučaju neograničenog prostora za pretraživanje, broj proširenih čvorova eksponencijalno je u dubini rješenja (najkraći put) d: O b^d), gdje je b faktor grananja(prosječan broj nasljednika po stanju). To pretpostavlja da ciljno stanje uopće postoji, i daje dostupan iz početnog stanja; ako nije, a prostor stanja je beskonačan, algoritam se neće završiti. Vremenska je složenost polinomska kada je prostor za pretraživanje stablo, postoji jedno stanje cilja i heuristička funkcija h zadovoljava sljedeće uvjete:|h(x) - h^*(x)| = O(\log h^*(x))gdje je h * je optimalan heuristički, točan trošak za doći od x do cilja."
+            const ul = document.getElementById("ul_primjena");
+            const li = document.createElement("li");
+            li.appendChild(document.createTextNode("Videoigre – A* algoritam je široko upotrebljavan za rješavanje problema pronalaženja puta"));
+            ul.appendChild(li);
+            const li1 = document.createElement("li");
+            li1.appendChild(document.createTextNode("Optimizacija pretraživanja "));
+            ul.appendChild(li1);
+            const li2 = document.createElement("li");
+            li2.appendChild(document.createTextNode("Strojno učenje"));
+            ul.appendChild(li2);
+            const li3 = document.createElement("li");
+            li3.appendChild(document.createTextNode("Umjetna inteligencija"));
+            ul.appendChild(li3);
+        }
             else if(target.id==='2'){
                 Display();
             visualizeDFS(grid,startNode,endNode);
-            document.getElementById('h5_pseudo').innerHTML="Rekurzija DFS algoritma se implementira uporabom stoga, pri čemu će svaki čvor grafa biti označen ako posjećen ili neposjećen.                                                Implementacija može biti opisana na sljedeći način:                                                               1.Odabere se početni čvor te se stave njegovi susjedi na vrh stoga                                                                                                              2.Skida se čvor sa vrha stoga te ga se stavlja u listu posjećenih čvorova                                         3.Susjedi tog čvora koji se ne nalaze u listi posjećenih čvorova potom se stavljaju na vrh stoga                                                                                                              4.Ponavlja se 2. i 3. korak dok stog ne bude prazan ";
+            var pseudo_img=document.getElementById('pseudo_slika');
+            pseudo_img.setAttribute('src', "./images/algorithm_img/dfs_pseudo.png");
+            document.getElementById('h5_pseudo').innerHTML="Rekurzija DFS algoritma se implementira uporabom stoga, pri čemu će svaki čvor grafa biti označen ako posjećen ili neposjećen.                                                Implementacija može biti opisana na sljedeći način:  "                                                             
+            const pseudo_list=document.getElementById('pseudo_lista')
+           const pseudo1 =document.createElement('li');
+            pseudo1.appendChild(document.createTextNode("Odabere se početni čvor te se stave njegovi susjedi na vrh"));
+            pseudo_list.appendChild(pseudo1);
+           const pseudo2 =document.createElement('li');
+            pseudo2.appendChild(document.createTextNode("Skida se čvor sa vrha stoga te ga se stavlja u listu posjećenih čvorova"));
+            pseudo_list.appendChild(pseudo2);
+           const pseudo3 =document.createElement('li');
+            pseudo3.appendChild(document.createTextNode("Susjedi tog čvora koji se ne nalaze u listi posjećenih čvorova potom se stavljaju na vrh stoga                                                                                      "));
+            pseudo_list.appendChild(pseudo3);
+           const pseudo4 =document.createElement('li');
+            pseudo4.appendChild(document.createTextNode("Ponavlja se 2. i 3. korak dok stog ne bude prazan "));
+            pseudo_list.appendChild(pseudo4);
+        
             document.getElementById('h5_primjer').innerHTML=""
-            document.getElementById('h5_slozenost').innerHTML="Vremenska složenost je O(V) + O(E) = O(V + E), a prostorna O(V)."
+            document.getElementById('h5p_slozenost').innerHTML="Prostorna složenost je O(V)."
+            document.getElementById('h5v_slozenost').innerHTML="Vremenska složenost je O(V) + O(E) = O(V + E)"
             const ul = document.getElementById("ul_primjena");
             const li = document.createElement("li");
             li.appendChild(document.createTextNode("Rješavanje zagonetki poput labirinta i sudoku-a"));
@@ -77,7 +168,39 @@ const PathFind=()=>{
         }
             else if(target.id==='1'){
                 Display();
-            visualizeBFS(grid,startNode,endNode);}
+            visualizeBFS(grid,startNode,endNode);
+              document.getElementById('h5_pseudo').innerHTML="Algoritam pretraživanja u širinu se koristi redom kao strukturom podataka u koji se dodaju svi susjedi nekoga čvora. Implementacija algoritma može biti opisana na sljedeći način:"
+            const pseudo_list=document.getElementById('pseudo_lista')
+           const pseudo1 =document.createElement('li');
+            pseudo1.appendChild(document.createTextNode("Odabere se početni čvor te se stavi na početak reda"));
+            pseudo_list.appendChild(pseudo1);
+           const pseudo2 =document.createElement('li');
+            pseudo2.appendChild(document.createTextNode("Čvor s početka reda se skine te se doda listi posjećenih čvorova"));
+            pseudo_list.appendChild(pseudo2);
+           const pseudo3 =document.createElement('li');
+            pseudo3.appendChild(document.createTextNode("Stvara se lista susjednih čvorova te se u nju dodaju oni susjedi koji nisu posjećeni "));
+            pseudo_list.appendChild(pseudo3);
+           const pseudo4 =document.createElement('li');
+            pseudo4.appendChild(document.createTextNode("Ponavlja se 2. i 3.korak dok red nije prazan "));
+            pseudo_list.appendChild(pseudo4);
+        
+            document.getElementById('h5_primjer').innerHTML=""
+            document.getElementById('h5p_slozenost').innerHTML="Prostorna složenost je O(V)."
+            document.getElementById('h5v_slozenost').innerHTML="Vremenska složenost je O(V) + O(E) = O(V + E)"
+            const ul = document.getElementById("ul_primjena");
+            const li = document.createElement("li");
+            li.appendChild(document.createTextNode("GPS navigacijski sustav- za pronalaženje susjednih lokacija s određenog izvornog  mjesta"));
+            ul.appendChild(li);
+            const li1 = document.createElement("li");
+            li1.appendChild(document.createTextNode("Društvene mreže- može se pronaći broj ljudi na određenoj udaljenosti ‘k’ od osobe "));
+            ul.appendChild(li1);
+            const li2 = document.createElement("li");
+            li2.appendChild(document.createTextNode("P2P (Peer to Peer) mreže -mreže poput BitTorrent-a koriste BFS za pronalaženje svih susjednih čvorova određenog čvora"));
+            ul.appendChild(li2);
+            const li3 = document.createElement("li");
+            li3.appendChild(document.createTextNode("Pauci za optimizaciju tražilice- Glavna ideja koja stoji iza indeksiranja jest započeti s izvorne stranice i slijediti sve veze s tog izvora na druge stranice te stalno ponavljati isto"));
+            ul.appendChild(li3); 
+        }
         },false);
         
     };
@@ -363,6 +486,8 @@ function RemoveDisplay(){
         } else {
           x[i].style.display = 'none';
         }}
+       document.getElementById("ul_primjena").innerHTML = "";
+       document.getElementById('pseudo_lista').innerHTML="";
     },) 
 }
 
