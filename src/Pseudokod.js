@@ -8,7 +8,7 @@ import './komponenta.css'
 const Pseudokod=()=>{
 
 return(
-    <div className='komponenta' id='pseudokod'>
+    <div className='komponenta' id='pseudokod' style={{display:'none'}}>
         <img src={pseudoSlika} style={{marginLeft:'auto',marginRight:'auto',marginTop:'2rem',marginBottom:'4rem',display: 'block',width:'100%', }} alt='pseudokod header'/>
     <Grid container spacing={4} direction="row" >
         <Grid item xs={6} >

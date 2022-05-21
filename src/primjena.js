@@ -6,7 +6,7 @@ import './komponenta.css'
 
 const Primjena=()=>{
 return(
-    <div class="komponenta" style={{paddingBottom:'2rem'}} id="primjena">
+    <div class="komponenta" style={{paddingBottom:'2rem', display:'none'}} id="primjena">
         <img src={primjenaSlika} style={{marginLeft:'auto',marginRight:'auto',marginTop:'2rem',marginBottom:'4rem',display: 'block',maxWidth:'100%', height:'auto',  }} alt='pseudokod header'/>
     <Grid container spacing={4} direction="row" >
         <Grid item xs={6} >

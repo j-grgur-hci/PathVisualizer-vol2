@@ -5,7 +5,7 @@ import okvirPrimjer from './images/okvirPrimjer.png'
 import './komponenta.css'
 const Primjer=()=>{
     return(
-        <div class="komponenta" id="primjer">
+        <div class="komponenta" id="primjer" style={{display:'none'}}>
          <img src={primjerSlika} style={{marginLeft:'auto',marginRight:'auto',marginTop:'2rem',marginBottom:'4rem',display: 'block',width:'100%', }} alt='primjer header'/>
            <Grid container spacing={4} direction="row" >
         <Grid item xs={6} >

@@ -5,7 +5,7 @@ import okvirSlozenost from './images/slozenostPrimjer.png'
 import './komponenta.css'
 const Slozenost=()=>{
     return(
-        <div class="komponenta" id="slozenost">
+        <div class="komponenta" id="slozenost" style={{display:'none'}}>
          <img src={slozenostSlika} style={{marginLeft:'auto',marginRight:'auto',marginTop:'2rem',marginBottom:'4rem',display: 'block',width:'100%', }} alt='slozenost header'/>
            <Grid container spacing={4} direction="row" >
         <Grid item xs={6} >

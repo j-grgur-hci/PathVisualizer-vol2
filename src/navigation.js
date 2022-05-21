@@ -7,7 +7,7 @@ import {HashLink as Link} from 'react-router-hash-link';
 const Navigation =()=>{
     return(
     <div>
-     <div class="navigation">
+     <div class="navigation" style={{display:'none'}}>
          
                    <Grid container spacing={0} direction="row" >
                     <Grid item xs={3} >

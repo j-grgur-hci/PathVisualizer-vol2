@@ -49,11 +49,14 @@ const PathFind=()=>{
         document.getElementById('grid').addEventListener('click',function(e){
             var target=e.target;
             if(target.id==='3'){
+                Display();
             visualizeDijkstra(grid,startNode,endNode);
         }
             else if(target.id==='4'){
+                Display();
             visualizeA(startNode,endNode);}
             else if(target.id==='2'){
+                Display();
             visualizeDFS(grid,startNode,endNode);
             document.getElementById('h5_pseudo').innerHTML="Rekurzija DFS algoritma se implementira uporabom stoga, pri čemu će svaki čvor grafa biti označen ako posjećen ili neposjećen.                                                Implementacija može biti opisana na sljedeći način:                                                               1.Odabere se početni čvor te se stave njegovi susjedi na vrh stoga                                                                                                              2.Skida se čvor sa vrha stoga te ga se stavlja u listu posjećenih čvorova                                         3.Susjedi tog čvora koji se ne nalaze u listi posjećenih čvorova potom se stavljaju na vrh stoga                                                                                                              4.Ponavlja se 2. i 3. korak dok stog ne bude prazan ";
             document.getElementById('h5_primjer').innerHTML=""
@@ -73,6 +76,7 @@ const PathFind=()=>{
             ul.appendChild(li3); 
         }
             else if(target.id==='1'){
+                Display();
             visualizeBFS(grid,startNode,endNode);}
         },false);
         
@@ -339,12 +343,13 @@ const clearPath=()=>{
 function Display() {
     setTimeout(()=>{
         var x = document.querySelectorAll('.komponenta, .navigation');
-        console.log(x);
         for(let i=0;i<x.length;i++){
         if (x[i].style.display === 'none') {
           x[i].style.display = 'block';
+           console.log(x[i].style.display);
         } else {
           x[i].style.display = 'none';
+           console.log('none je');
         }}
     },)
 }
@@ -360,6 +365,7 @@ function RemoveDisplay(){
         }}
     },) 
 }
+
 return(
     <div>
 
@@ -367,8 +373,8 @@ return(
         {/* <button type='button' class='button' onClick={clearWalls}>Clear walls</button> */}
         {/* <button type='button' class='button' onClick={clearBoard}>Clear board</button> */}
          <Grid container spacing={0} direction="column" >
-        <Grid item xs={12} style={{maxWidth:'85%', margin:'auto',position:'relative'}} onClick={Display} >
-        <button type='button' class='button' id='1'  onClick={visualizePathBFS} >BFS</button> 
+        <Grid item xs={12} style={{maxWidth:'85%', margin:'auto',position:'relative'}}  >
+        <button type='button' class='button' id='1'  onClick={visualizePathBFS}>BFS</button> 
         <button type='button' class='button' id='2' onClick={visualizePathDFS}>DFS</button> 
         <button type='button' class='button' id='3' onClick={visualizePathDijkstra}>Dijkstra</button> 
         <button type='button'class='button' id='4' onClick={visualizePathAstar} >A*</button>
