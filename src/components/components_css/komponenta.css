@@ -1,21 +1,21 @@
 @font-face {
-    font-family: Ribeye;
-    src: url("../../Ribeye/Ribeye-Regular.ttf");
+  font-family: Ribeye;
+  src: url("../../Ribeye/Ribeye-Regular.ttf");
 }
 
 .komponenta {
-    color: black;
-    font-family: 'Ribeye';
-    font-size: 1.5rem;
-    display: none;
+  color: black;
+  font-family: "Ribeye";
+  font-size: 1.5rem;
+  display: none;
 }
 
-li{
-    color: black;
-    font-family: 'Ribeye';
-    margin-bottom:1.25rem ;
-    font-size: 1.25rem;
+li {
+  color: black;
+  font-family: "Ribeye";
+  margin-bottom: 1.25rem;
+  font-size: 1.25rem;
 }
 li:last-child {
-    margin-bottom: 0rem;
+  margin-bottom: 0rem;
 }

@@ -1,5 +1,5 @@
 .body {
-  background: #EFE7DB;
+  background: #efe7db;
   margin: 0;
   overflow-x: hidden;
 }
@@ -14,22 +14,21 @@ html {
   height: 368px;
   left: 471px;
   top: 25px;
-  font-family: 'Ribeye';
+  font-family: "Ribeye";
   font-style: normal;
   font-weight: 400;
   font-size: 96px;
   line-height: 131px;
   color: #000000;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
-  0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.imageWrapper{
+.imageWrapper {
   position: relative;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 35%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
 }
 .overlayImage {
   position: absolute;
@@ -37,7 +36,7 @@ html {
   /* display: block; */
   margin-left: auto;
   margin-right: auto;
-  top:10%;
-  left:50%;
+  top: 10%;
+  left: 50%;
   width: 35%;
 }

@@ -1,82 +1,83 @@
 @font-face {
-    font-family: Ribeye;
-    src: url("./Ribeye/Ribeye-Regular.ttf");
+  font-family: Ribeye;
+  src: url("./Ribeye/Ribeye-Regular.ttf");
 }
-.row{
-    display:flex;
-
+.row {
+  display: flex;
 }
-.main{
-    max-width:85%;
-    margin: auto;
-    position:relative; 
-    top: 5rem;
-    padding-bottom: 1rem; 
-}
-
-.button{
-    display: inline-block;
-    width: 12rem;
-    height: 2.5rem;
-    color: #FFFFFF;
-    background-color: #D90000;
-    border: #D90000;
-    border-right: black solid 0.5px;
-    font-family: 'Ribeye';
-    font-size: 25px; 
-    margin-bottom: 20px;
-    letter-spacing: -1px; line-height: 1; text-align: center; 
-    cursor: pointer;
-}
-.button:last-child{
-    border-right: none;
+.main {
+  max-width: 85%;
+  margin: auto;
+  position: relative;
+  top: 5rem;
+  padding-bottom: 1rem;
 }
 
-.button:hover{
-    background-color: black;
+.button {
+  display: inline-block;
+  width: 12rem;
+  height: 2.5rem;
+  color: #ffffff;
+  background-color: #d90000;
+  border: #d90000;
+  border-right: black solid 0.5px;
+  font-family: "Ribeye";
+  font-size: 25px;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
 }
-.clear{
-        margin-top: 2rem;
-        width: 12rem;
-        height: 2.5rem;
-        color: black;
-        background-color: #FFFFFF;
-        border: #FFFFFF;
-        font-family: 'Ribeye';
-        font-size: 25px;
-        margin-bottom: 20px;
-        letter-spacing: -1px;
-        line-height: 1;
-        text-align: center;
-        display:inline ;
-        cursor: pointer;
+.button:last-child {
+  border-right: none;
 }
 
-.clear:hover{
-    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
-    transform: translate3d(0, 0, 0);
-    perspective: 1000px;
+.button:hover {
+  background-color: black;
+}
+.clear {
+  margin-top: 2rem;
+  width: 12rem;
+  height: 2.5rem;
+  color: black;
+  background-color: #ffffff;
+  border: #ffffff;
+  font-family: "Ribeye";
+  font-size: 25px;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+  line-height: 1;
+  text-align: center;
+  display: inline;
+  cursor: pointer;
+}
+
+.clear:hover {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  perspective: 1000px;
 }
 
 @keyframes shake {
-    10%,
-    90% {
-        transform: translate3d(-1px, 0, 0);
-    }
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
 
-    20%,
-    80% {
-        transform: translate3d(2px, 0, 0);
-    }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
 
-    30%,
-    50%,
-    70% {
-        transform: translate3d(-4px, 0, 0);
-    }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
 
-    40%,
-    60% {
-        transform: translate3d(4px, 0, 0);
-    }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
