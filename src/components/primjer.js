@@ -26,11 +26,31 @@ const Primjer = () => {
           ></h5>
         </Grid>
         <Grid item xs={6}>
-          <img
-            src={okvirPrimjer}
-            style={{ marginRight: "2rem" }}
-            alt="okvir za sliku primjera"
-          />
+          <div style={{ position: "relative" }}>
+            <img
+              src={okvirPrimjer}
+              style={{
+                marginRight: "2rem",
+                position: "relative",
+                top: "0",
+                left: "0",
+              }}
+              alt="okvir za sliku primjera"
+            />
+            <img
+              src={require("../images/pseudokod.png").default}
+              alt="primjer_slika"
+              id="primjer_slika"
+              style={{
+                marginRight: "2rem",
+                position: "absolute",
+                top: "4rem",
+                right: "2rem",
+                maxWidth: "488px",
+                maxHeight: "358px",
+              }}
+            />
+          </div>
         </Grid>
       </Grid>
     </div>

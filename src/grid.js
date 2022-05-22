@@ -6,6 +6,19 @@ import dijkstra from "./algorithms/dijkstra"
 import dfs from "./algorithms/dfs"
 import bfs from "./algorithms/bfs"
 import { Grid } from "@mui/material"
+// BFS
+import bfs_pseudo from "./images/algorithm_img/bfs_pseudo.png"
+import bfs_primjer from "./images/algorithm_img/bfs_primjer.png"
+//DFS
+import dfs_pseudo from "./images/algorithm_img/dfs_pseudo.png"
+import dfs_primjer from "./images/algorithm_img/dfs_primjer.png"
+//DIJKSTRA
+import dijkstra_pseudo from "./images/algorithm_img/dijkstra_pseudo.png"
+import dijkstra_primjer from "./images/algorithm_img/dijkstra_primjer.png"
+//A*
+import astar_pseudo from "./images/algorithm_img/astar_pseudo.png"
+import astar_primjer from "./images/algorithm_img/astar_primjer.png"
+
 const rows = 12
 const cols = 35
 const NODE_START_ROW = 0
@@ -49,7 +62,8 @@ const PathFind = () => {
         if (target.id === "3") {
           Display()
           visualizeDijkstra(grid, startNode, endNode)
-
+          document.getElementById("pseudo_slika").src = dijkstra_pseudo
+          document.getElementById("primjer_slika").src = dijkstra_primjer
           document.getElementById("h5_pseudo").innerHTML =
             "Dijkstrin algoritam se koristi redom s prioritetom kao strukturom podataka, pri čemu je svaki element povezan s prioritetom te se obrađuje prema istome. Razlika između reda s prioritetom i običnog reda je da obični red funkcionira po principu FIFO (First In First Out), a red s prioritetom funkcionira na osnovu prioriteta odnosno element s najvećim prioritetom se prvi miče.                 Implementacija algoritma može biti opisana na sljedeći način:"
           const pseudo_list = document.getElementById("pseudo_lista")
@@ -133,6 +147,8 @@ const PathFind = () => {
         } else if (target.id === "4") {
           Display()
           visualizeA(startNode, endNode)
+          document.getElementById("pseudo_slika").src = astar_pseudo
+          document.getElementById("primjer_slika").src = astar_primjer
           document.getElementById("h5_pseudo").innerHTML =
             "A* algoritam se implementira poput Dijkstre, preko reda s prioritetom, ali u odnosu na Dijkstru koristi heuristiku za pretraživanje čvorova tako da je vjerojatnije da će se ciljni čvor prije pronaći.Implementacija algoritma se može opisati na sljedeći način:"
           const pseudo_list = document.getElementById("pseudo_lista")
@@ -195,14 +211,12 @@ const PathFind = () => {
           const li3 = document.createElement("li")
           li3.appendChild(document.createTextNode("Umjetna inteligencija"))
           ul.appendChild(li3)
+          //                DFS
         } else if (target.id === "2") {
           Display()
           visualizeDFS(grid, startNode, endNode)
-          var pseudo_img = document.getElementById("pseudo_slika")
-          pseudo_img.setAttribute(
-            "src",
-            "./images/algorithm_img/dfs_pseudo.png"
-          )
+          document.getElementById("pseudo_slika").src = dfs_pseudo
+          document.getElementById("primjer_slika").src = dfs_primjer
           document.getElementById("h5_pseudo").innerHTML =
             "Rekurzija DFS algoritma se implementira uporabom stoga, pri čemu će svaki čvor grafa biti označen ako posjećen ili neposjećen.                                                Implementacija može biti opisana na sljedeći način:  "
           const pseudo_list = document.getElementById("pseudo_lista")
@@ -263,9 +277,12 @@ const PathFind = () => {
             document.createTextNode("Detekcija ciklusa u grafovima")
           )
           ul.appendChild(li3)
+          /*         BFS         */
         } else if (target.id === "1") {
           Display()
           visualizeBFS(grid, startNode, endNode)
+          document.getElementById("pseudo_slika").src = bfs_pseudo
+          document.getElementById("primjer_slika").src = bfs_primjer
           document.getElementById("h5_pseudo").innerHTML =
             "Algoritam pretraživanja u širinu se koristi redom kao strukturom podataka u koji se dodaju svi susjedi nekoga čvora. Implementacija algoritma može biti opisana na sljedeći način:"
           const pseudo_list = document.getElementById("pseudo_lista")

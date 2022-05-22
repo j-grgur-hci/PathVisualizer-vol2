@@ -25,6 +25,7 @@ const Pseudokod = () => {
             <img
               src={okvir}
               style={{
+                  display:'block',
                 marginLeft: "2rem",
                 position: "relative",
                 top: "0",
@@ -33,14 +34,17 @@ const Pseudokod = () => {
               alt="okvir za sliku pseudokoda"
             />
             <img
-              src=""
+              src={require("../images/pseudokod.png").default}
               alt="pseudo_img"
               id="pseudo_slika"
               style={{
+                display:'block',
                 marginLeft: "4rem",
                 position: "absolute",
                 top: "4rem",
                 left: "1rem",
+                maxWidth:'478px',
+                maxHeight:'418px'
               }}
             />
           </div>
