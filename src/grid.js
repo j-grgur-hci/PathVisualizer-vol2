@@ -63,7 +63,8 @@ const PathFind = () => {
           Display()
           visualizeDijkstra(grid, startNode, endNode)
           document.getElementById("pseudo_slika").src = dijkstra_pseudo
-          document.getElementById("primjer_slika").src = dijkstra_primjer
+          // document.getElementById("primjer_slika").src = dijkstra_primjer
+          document.getElementById("primjer_video").src = "https://www.youtube.com/embed/0nVYi3o161A" 
           document.getElementById("h5_pseudo").innerHTML =
             "Dijkstrin algoritam se koristi redom s prioritetom kao strukturom podataka, pri čemu je svaki element povezan s prioritetom te se obrađuje prema istome. Razlika između reda s prioritetom i običnog reda je da obični red funkcionira po principu FIFO (First In First Out), a red s prioritetom funkcionira na osnovu prioriteta odnosno element s najvećim prioritetom se prvi miče.                 Implementacija algoritma može biti opisana na sljedeći način:"
           const pseudo_list = document.getElementById("pseudo_lista")
@@ -110,7 +111,7 @@ const PathFind = () => {
           )
           pseudo_list.appendChild(pseudo6)
 
-          document.getElementById("h5_primjer").innerHTML = ""
+          // document.getElementById("h5_primjer").innerHTML = ""
           document.getElementById("h5p_slozenost").innerHTML =
             "Prostorna složenost u najgorem slučaju je O(E+V log⁡V) koristeći red s prioritetom"
           document.getElementById("h5v_slozenost").innerHTML =
@@ -148,7 +149,8 @@ const PathFind = () => {
           Display()
           visualizeA(startNode, endNode)
           document.getElementById("pseudo_slika").src = astar_pseudo
-          document.getElementById("primjer_slika").src = astar_primjer
+          // document.getElementById("primjer_slika").src = astar_primjer
+          document.getElementById("primjer_video").src = "https://www.youtube.com/embed/PzEWHH2v3TE" 
           document.getElementById("h5_pseudo").innerHTML =
             "A* algoritam se implementira poput Dijkstre, preko reda s prioritetom, ali u odnosu na Dijkstru koristi heuristiku za pretraživanje čvorova tako da je vjerojatnije da će se ciljni čvor prije pronaći.Implementacija algoritma se može opisati na sljedeći način:"
           const pseudo_list = document.getElementById("pseudo_lista")
@@ -187,7 +189,7 @@ const PathFind = () => {
             )
           )
           pseudo_list.appendChild(pseudo5)
-          document.getElementById("h5_primjer").innerHTML = ""
+          // document.getElementById("h5_primjer").innerHTML = ""
           document.getElementById("h5p_slozenost").innerHTML =
             "Prostorna složenost u najgorem slučaju je O(V)."
           document.getElementById("h5v_slozenost").innerHTML =
@@ -216,7 +218,8 @@ const PathFind = () => {
           Display()
           visualizeDFS(grid, startNode, endNode)
           document.getElementById("pseudo_slika").src = dfs_pseudo
-          document.getElementById("primjer_slika").src = dfs_primjer
+          // document.getElementById("primjer_slika").src = dfs_primjer
+          document.getElementById("primjer_video").src = "https://www.youtube.com/embed/iaBEKo5sM7w"
           document.getElementById("h5_pseudo").innerHTML =
             "Rekurzija DFS algoritma se implementira uporabom stoga, pri čemu će svaki čvor grafa biti označen ako posjećen ili neposjećen.                                                Implementacija može biti opisana na sljedeći način:  "
           const pseudo_list = document.getElementById("pseudo_lista")
@@ -249,7 +252,7 @@ const PathFind = () => {
           )
           pseudo_list.appendChild(pseudo4)
 
-          document.getElementById("h5_primjer").innerHTML = ""
+          // document.getElementById("h5_primjer").innerHTML = ""
           document.getElementById("h5p_slozenost").innerHTML =
             "Prostorna složenost je O(V)."
           document.getElementById("h5v_slozenost").innerHTML =
@@ -282,7 +285,8 @@ const PathFind = () => {
           Display()
           visualizeBFS(grid, startNode, endNode)
           document.getElementById("pseudo_slika").src = bfs_pseudo
-          document.getElementById("primjer_slika").src = bfs_primjer
+          // document.getElementById("primjer_slika").src = bfs_primjer
+          document.getElementById("primjer_video").src = "https://www.youtube.com/embed/QRq6p9s8NVg" 
           document.getElementById("h5_pseudo").innerHTML =
             "Algoritam pretraživanja u širinu se koristi redom kao strukturom podataka u koji se dodaju svi susjedi nekoga čvora. Implementacija algoritma može biti opisana na sljedeći način:"
           const pseudo_list = document.getElementById("pseudo_lista")
@@ -315,7 +319,7 @@ const PathFind = () => {
           )
           pseudo_list.appendChild(pseudo4)
 
-          document.getElementById("h5_primjer").innerHTML = ""
+          // document.getElementById("h5_primjer").innerHTML = ""
           document.getElementById("h5p_slozenost").innerHTML =
             "Prostorna složenost je O(V)."
           document.getElementById("h5v_slozenost").innerHTML =

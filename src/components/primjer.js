@@ -18,26 +18,34 @@ const Primjer = () => {
         }}
         alt="primjer header"
       />
-      <Grid container spacing={4} direction="row">
-        <Grid item xs={6}>
-          <h5
+      <Grid
+        container
+        spacing={0}
+        alignItems="center"
+        justifyContent="center"
+        direction="row"
+      >
+        {/* <Grid item xs={6}> */}
+        {/* <h5
             style={{ marginLeft: "2rem", fontSize: "1.25rem" }}
             id="h5_primjer"
-          ></h5>
-        </Grid>
-        <Grid item xs={6}>
+          ></h5> */}
+        {/* </Grid> */}
+        <Grid item xs={12} justify="center">
           <div style={{ position: "relative" }}>
             <img
               src={okvirPrimjer}
               style={{
-                marginRight: "2rem",
+                marginLeft: "auto",
+                marginRight: "auto",
+                width: "50%",
+                display: "block",
                 position: "relative",
                 top: "0",
-                left: "0",
               }}
               alt="okvir za sliku primjera"
             />
-            <img
+            {/* <img
               src={require("../images/pseudokod.png").default}
               alt="primjer_slika"
               id="primjer_slika"
@@ -48,8 +56,25 @@ const Primjer = () => {
                 right: "2rem",
                 maxWidth: "488px",
                 maxHeight: "358px",
-              }}
-            />
+              }} */}
+            {/* /> */}
+            <div className="ratio ratio-1x1">
+              <iframe
+                src={require("../images/pseudokod.png").default}
+                id="primjer_video"
+                title="Youtube video"
+                allowFullScreen
+                style={{
+                  position: "absolute",
+                  display: "block",
+                  top: "2rem",
+                  left: "27%",
+                  width: "46vw",
+                  height: "65vh",
+                }}
+              ></iframe>
+              {/* <iframe src="https://www.youtube.com/embed/xNRJwmlRBNU" title="Youtube video" allowFullScreen style={{position:"absolute", display:"block", top:"2rem", left:"27%", width:"46vw", height:"65vh"}}></iframe> */}
+            </div>
           </div>
         </Grid>
       </Grid>
