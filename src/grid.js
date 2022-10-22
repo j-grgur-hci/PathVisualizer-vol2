@@ -55,6 +55,15 @@ const PathFind = () => {
     startNode.isWall = false
     endNode.isWall = false
 
+    window.addEventListener("load", function () {
+      setTimeout(function open(event) {
+        document.querySelector(".popup").style.display = "block"
+      }, 1000)
+    })
+    document.querySelector("#close").addEventListener("click", function () {
+      document.querySelector(".popup").style.display = "none"
+    })
+
     document.getElementById("grid").addEventListener(
       "click",
       function (e) {
@@ -64,6 +73,7 @@ const PathFind = () => {
           visualizeDijkstra(grid, startNode, endNode)
           document.getElementById("pseudo_slika").src = dijkstra_pseudo
           // document.getElementById("primjer_slika").src = dijkstra_primjer
+          document.getElementById("primjena_slika").src = dijkstra_primjena
           document.getElementById("primjer_video").src = "https://www.youtube.com/embed/0nVYi3o161A" 
           document.getElementById("h5_pseudo").innerHTML =
             "Dijkstrin algoritam se koristi redom s prioritetom kao strukturom podataka, pri čemu je svaki element povezan s prioritetom te se obrađuje prema istome. Razlika između reda s prioritetom i običnog reda je da obični red funkcionira po principu FIFO (First In First Out), a red s prioritetom funkcionira na osnovu prioriteta odnosno element s najvećim prioritetom se prvi miče.                 Implementacija algoritma može biti opisana na sljedeći način:"

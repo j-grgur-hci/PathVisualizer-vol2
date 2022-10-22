@@ -31,6 +31,20 @@ const Primjena = () => {
             style={{ marginLeft: "2rem" }}
             alt="okvir za sliku primjene"
           />
+          <img
+            src={require("../images/primjena.png").default}
+            alt="primjena_img"
+            id="primjena_slika"
+            style={{
+              display: "block",
+              marginLeft: "4rem",
+              position: "absolute",
+              top: "4rem",
+              left: "1rem",
+              maxWidth: "478px",
+              maxHeight: "418px",
+            }}
+          />
         </Grid>
         <Grid item xs={6}>
           <ul style={{ marginRight: "2rem" }} id="ul_primjena"></ul>
