@@ -9,15 +9,19 @@ import { Grid } from "@mui/material"
 // BFS
 import bfs_pseudo from "./images/algorithm_img/bfs_pseudo.png"
 import bfs_primjer from "./images/algorithm_img/bfs_primjer.png"
+import bfs_primjena from "./images/algorithm_img/bfs_primjena.png"
 //DFS
 import dfs_pseudo from "./images/algorithm_img/dfs_pseudo.png"
 import dfs_primjer from "./images/algorithm_img/dfs_primjer.png"
+import dfs_primjena from "./images/algorithm_img/dfs_primjena.png"
 //DIJKSTRA
 import dijkstra_pseudo from "./images/algorithm_img/dijkstra_pseudo.png"
 import dijkstra_primjer from "./images/algorithm_img/dijkstra_primjer.png"
+import dijkstra_primjena from "./images/algorithm_img/dijkstra_primjena.png"
 //A*
 import astar_pseudo from "./images/algorithm_img/astar_pseudo.png"
 import astar_primjer from "./images/algorithm_img/astar_primjer.png"
+import astar_primjena from "./images/algorithm_img/astar_primjena.png"
 
 const rows = 12
 const cols = 35
@@ -73,7 +77,7 @@ const PathFind = () => {
           visualizeDijkstra(grid, startNode, endNode)
           document.getElementById("pseudo_slika").src = dijkstra_pseudo
           // document.getElementById("primjer_slika").src = dijkstra_primjer
-          // document.getElementById("primjena_slika").src = dijkstra_primjena
+          document.getElementById("primjena_slika").src = dijkstra_primjena
           document.getElementById("primjer_video").src = "https://www.youtube.com/embed/0nVYi3o161A" 
           document.getElementById("h5_pseudo").innerHTML =
             "Dijkstrin algoritam se koristi redom s prioritetom kao strukturom podataka, pri čemu je svaki element povezan s prioritetom te se obrađuje prema istome. Razlika između reda s prioritetom i običnog reda je da obični red funkcionira po principu FIFO (First In First Out), a red s prioritetom funkcionira na osnovu prioriteta odnosno element s najvećim prioritetom se prvi miče.                 Implementacija algoritma može biti opisana na sljedeći način:"
@@ -230,6 +234,7 @@ const PathFind = () => {
           visualizeDFS(grid, startNode, endNode)
           document.getElementById("pseudo_slika").src = dfs_pseudo
           // document.getElementById("primjer_slika").src = dfs_primjer
+          document.getElementById("primjena_slika").src = dfs_primjena
           document.getElementById("primjer_video").src = "https://www.youtube.com/embed/iaBEKo5sM7w"
           document.getElementById("h5_pseudo").innerHTML =
             "Rekurzija DFS algoritma se implementira uporabom stoga, pri čemu će svaki čvor grafa biti označen ako posjećen ili neposjećen.                                                Implementacija može biti opisana na sljedeći način:  "
@@ -297,6 +302,7 @@ const PathFind = () => {
           visualizeBFS(grid, startNode, endNode)
           document.getElementById("pseudo_slika").src = bfs_pseudo
           // document.getElementById("primjer_slika").src = bfs_primjer
+          document.getElementById("primjena_slika").src = bfs_primjena
           document.getElementById("primjer_video").src = "https://www.youtube.com/embed/QRq6p9s8NVg" 
           document.getElementById("h5_pseudo").innerHTML =
             "Algoritam pretraživanja u širinu se koristi redom kao strukturom podataka u koji se dodaju svi susjedi nekoga čvora. Implementacija algoritma može biti opisana na sljedeći način:"
