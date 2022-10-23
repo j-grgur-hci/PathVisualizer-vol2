@@ -41,7 +41,7 @@ const Pseudokod = () => {
                 display:'block',
                 marginLeft: "4rem",
                 position: "absolute",
-                top: "4rem",
+                top: "3rem",
                 left: "1rem",
                 maxWidth:'478px',
                 maxHeight:'418px'
