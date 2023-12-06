@@ -1,8 +1,37 @@
-## PathVisualizer was made for the practical part of a bachelor's thesis
-You can visit the website [here](https://path-visualizer.vercel.app)
-##### P.S. WORK IN PROGRESS
-### MOTIVATION
-Motivation behind creating an app in React that visualizes 4 pathfinding algorithms, was the Algorithms class itself.
-Many underestimate the usage of algorithms, maybe because of the lack of knowledge or maybe because they have difficulty understanding them.
-### THE GOAL
-Many of us are visual learners, and that's where this app comes in handy. It shows 4 pathfinding algorithms : BFS, DFS, Dijkstra and A*, but not only does it show their implementation on a grid, it also offers interesting informations about them.
+# Pathfinding Algorithms Visualization
+
+React application developed for visualizing four pathfinding algorithms as part of the **final thesis**.
+
+## Features
+
+- Visualize four pathfinding algorithms: BFS, DFS, Dijkstra, A*.
+- Contribute to in-depth knowledge of algorithms and React development skills.
+
+## Project Goals
+
+- Demonstrate independent problem-solving through application implementation.
+- Contribute to academic and practical understanding of algorithms.
+
+## Algorithm Descriptions
+
+- **BFS (Breadth-First Search):** Suitable for finding the shortest path in unweighted graphs.
+  
+- **DFS (Depth-First Search):** Ideal for traversing graphs and solving maze problems.
+
+- **Dijkstra's Algorithm:** Effective for finding the shortest path in weighted graphs.
+
+- **A* Algorithm:** A heuristic-based approach widely used in robotics and gaming for pathfinding.
+
+
+## Technologies Used
+
+- React
+- JavaScript
+
+## Getting Started
+
+- Clone the repository
+- Run `npm install` to install dependencies
+- Start the development server with `npm start`
+
+Feel free to contribute, report issues, or suggest enhancements. 
